@@ -1,0 +1,32 @@
+<!-- animations.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Studio Animation</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Studio Animation</h1>
+  <table class="book-table">
+  <table>
+    <tr>
+      
+      <th>Studio</th>
+      <th>Animation</th>
+      
+    </tr>
+    <% for(var i = 0 ; i < sanis.length ; i++) { %>
+    <tr>
+      
+      <td><%= sanis[i].studio %></td>
+      <td><%= sanis[i].anime %></td>
+     
+    </tr>
+    <% } %>
+  </table>
+  <div class="link-center">
+    <br><a href="/sanis"class="button">Edit</a></br>
+   
+  </div>
+</body>
+</html>

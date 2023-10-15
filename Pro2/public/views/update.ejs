@@ -1,0 +1,28 @@
+<!-- update.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Studio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Update Studio</h1>
+    <!--Studio-->
+    <form method="post" action="/update/<%= studio.id_studio %>">
+      <label for="id_studio">ID:</label>
+      <input type="text" id="id_studio" name="id_studio" value="<%= studio.id_studio %>" />
+      <br />
+      <label for="studio">Studio:</label>
+      <input type="text" id="studio" name="studio" value="<%= studio.studio %>" />
+      <br />
+      <input type="submit" value="Update" />
+    </form>
+      
+      <a href="/studio/<%= studio.id_studio %>"class="button">View</a>
+      <a href="/delete/<%= studio.id_studio %>"class="button">Delete</a>
+      
+    </div>
+    
+    <a href="/studios"class="button">Back to List</a>
+  </body>
+</html>

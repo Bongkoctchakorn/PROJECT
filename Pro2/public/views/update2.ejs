@@ -1,0 +1,29 @@
+<!-- update2.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Animation</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Update Animation</h1>
+    <!--Animation-->
+    <form method="post" action="/update2/<%= animation.id_anime %>">
+      <label for="id_anime">ID:</label>
+      <input type="text" id="id_anime" name="id_anime" value="<%= animation.id_anime %>" />
+      <br />
+      <label for="anime">Animation:</label>
+      <input type="text" id="anime" name="anime" value="<%= animation.anime %>" />
+      <br />
+      <input type="submit" value="Update" />
+    </form>
+    <div class="link-center">
+      
+      <a href="/animation/<%= animation.id_anime %>"class="button">View</a>
+      <a href="/delete2/<%= animation.id_anime %>"class="button">Delete</a>
+      <a href="/animations"class="button">Back to List</a>
+    </div>
+    
+    
+  </body>
+</html>

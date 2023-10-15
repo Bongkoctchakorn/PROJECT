@@ -1,0 +1,38 @@
+<!-- animations.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Studio Animation</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Studio Animation</h1>
+  <table class="book-table">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Studio</th>
+      <th>Animation</th>
+      <th>Actions</th>
+    </tr>
+    <% for(var i=0; i < sanis.length; i++) { %>
+    <tr>
+      <td><%= sanis[i].id_sa %></td>
+      <td><%= sanis[i].studio %></td>
+      <td><%= sanis[i].anime %></td>
+      <td>
+        <a href="/sani/<%= sanis[i].id_sa %>">View</a>
+        <a href="/update3/<%= sanis[i].id_sa%>">Edit</a>
+        <a href="/delete3/<%= sanis[i].id_sa%>">Delete</a>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+  <div class="link-center">
+    <a href="/create3"class="button">Create New Studio Animation</a>
+    <a href="/studios"class="button">Studio</a>
+    <a href="/animations"class="button">Animation</a>
+    <a href="/sanis3"class="button">Home</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!-- animations.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animation</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Animation</h1>
+  <table class="book-table">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Animation</th>
+      <th>Actions</th>
+    </tr>
+    <% for(var i=0; i < animations.length; i++) { %>
+    <tr>
+      <td><%= animations[i].id_anime %></td>
+      <td><%= animations[i].anime %></td>
+      <td>
+        <a href="/animation/<%= animations[i].id_anime %>">View</a>
+        <a href="/update2/<%= animations[i].id_anime %>">Edit</a>
+        <a href="/delete2/<%= animations[i].id_anime%>">Delete</a>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+  <div class="link-center">
+    <a href="/create2"class="button">Create New Animation</a>
+    <a href="/studios"class="button">Go To Studio</a>
+    <a href="/sanis"class="button">Go To Studio Animation</a>
+  </div>
+</body>
+</html>

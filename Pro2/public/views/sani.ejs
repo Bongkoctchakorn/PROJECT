@@ -1,0 +1,28 @@
+<!-- animation.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Studio Animation</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>View Book</h1>
+    <table class="book-table">
+      <tr>
+        <th>ID</th>
+        <th>Studio</th>
+        <th>Animation</th>
+      </tr>
+      <tr>
+        <td><%= sani.id_sa %></td>
+        <td><%= sani.studio %></td>
+        <td><%= sani.anime %></td>
+      </tr>
+    </table>
+    <div class="link-center"></div>
+      <a href="/update3/<%= sani.id_sa %>"class="button">Edit</a>
+      <a href="/delete3/<%= sani.id_sa %>"class="button">Delete</a>
+      <a href="/sanis"class="button">Back to List</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!-- studios.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Studio</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <h1>Studio</h1>
+  <table class="book-table"></table>
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Studio</th>
+      <th>Actions</th>
+    </tr>
+    <% for(var i=0; i < studios.length; i++) { %>
+    <tr>
+      <td><%= studios[i].id_studio %></td>
+      <td><%= studios[i].studio %></td>
+      <td>
+        <a href="/studio/<%= studios[i].id_studio %>">View</a>
+        <a href="/update/<%= studios[i].id_studio %>">Edit</a>
+        <a href="/delete/<%= studios[i].id_studio%>">Delete</a>
+      </td>
+    </tr>
+    <% } %>
+  </table>
+  <div class="link-center">
+    <a href="/create"class="button">Create New Studio</a>
+    <a href="/animations"class="button">Go To Animation</a>
+    <a href="/sanis"class="button">Go To Studio Animation</a>
+  </div>
+</body>
+</html>

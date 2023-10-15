@@ -1,0 +1,47 @@
+<!-- create2.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Studio Animation</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Create Studio Animation</h1>
+    <form method="post" action="/create3">
+      
+      <label for="id_sa">ID:</label>
+      <input type="text" id="id_sa" name="id_sa" />
+        <br />
+      <label for="studioId">Studio:</label>
+        <select id="studioId" name="studioId">
+          <% studios.forEach(function(studio) { %>
+          <option value="<%= studio.id_studio %>"><%= studio.studio %></option>
+          <% }); %>
+          </select>
+      <br />
+
+      <label for="animeId">Animation:</label>
+        <select id="animeId" name="animeId">
+          <% animations.forEach(function(animation) { %>
+          <option value="<%= animation.id_anime %>"><%= animation.anime %></option>
+          <% }); %>
+          </select>
+      <br />
+        <br />
+        <input type="submit" value="create" />
+    </form>
+      <!--<label for="studioId">Studio:</label>
+      <input type="text" id="studioId" name="studioId" />
+      <br />-->
+      <!--<label for="animeId">Animation:</label>
+      <input type="text" id="animeId" name="animeId" />
+      <br />-->
+      
+    </form>
+    <div class="link-center">
+      <a href="/studios"class="button">Go To Studio</a>
+      <a href="/animations"class="button">Go To Animation</a>
+      <a href="/sanis"class="button">Back to List</a>
+    </div>
+  </body>
+</html>

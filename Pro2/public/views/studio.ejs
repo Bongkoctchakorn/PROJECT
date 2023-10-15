@@ -1,0 +1,28 @@
+<!-- studio.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Studio</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>View Book</h1>
+    <table class="book-table">
+      <tr>
+        <th>ID</th>
+        <th>Studio</th>
+      </tr>
+      <tr>
+        <td><%= studio.id_studio  %></td>
+        <td><%= studio.studio %></td>
+      </tr>
+    </table>
+    <div class="link-center"></div>
+    <a href="/animations"class="button">Go To Animation</a>
+      <a href="/update/<%= studio.id_studio %>"class="button">Edit</a>
+      <a href="/delete/<%= studio.id_studio %>"class="button">Delete</a>
+      
+    </div>
+    <a href="/studios"class="button">Back to List</a>
+  </body>
+</html>

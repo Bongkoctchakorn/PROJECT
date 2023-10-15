@@ -1,0 +1,44 @@
+<!-- update3.ejs -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Studio Animation</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <h1>Update Studio Animation</h1>
+    <!--Animation-->
+    <form method="post" action="/update3/<%= sani.id_sa %>">
+      <label for="id_sa">ID:</label>
+      <input type="text" id="id_sa" name="id_sa" value="<%= sani.id_sa %>" />
+      <br />
+
+      <label for="studioId">Studio:</label>
+      <select id="studioId" name="studioId">
+        <% studios.forEach(function(studio2) { %>
+          <option value="<%= studio2.id_studio %>" <%= (studio2.id_studio == sani.studioId) ? 'selected' : '' %>><%= studio2.studio %></option>
+        <% }); %>
+      </select>
+      <br />
+
+      <label for="animeId">Animation:</label>
+      <select id="animeId" name="animeId">
+        <% animations.forEach(function(animation2) { %>
+          <option value="<%= animation2.id_anime %>" <%= (animation2.id_anime == sani.animeId) ? 'selected' : '' %>><%= animation2.anime %></option>
+        <% }); %>
+      </select>
+
+      
+      <br />
+
+      <input type="submit" value="Update" />
+    </form>
+    <div class="link-center">
+      
+      <a href="/sani/<%= sani.id_sa %>" class="button">View</a>
+      <a href="/delete3/<%= sani.id_sa %>" class="button">Delete</a>
+      <a href="/sanis" class="button">Back to List</a>
+      
+    </div>
+  </body>
+</html>

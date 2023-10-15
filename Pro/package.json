@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "sequelize": "^6.33.0",
+    "sqlite": "^5.0.1"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.1.6"
+  }
+}
